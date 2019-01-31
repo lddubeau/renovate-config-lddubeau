@@ -1,0 +1,36 @@
+{
+  "name": "renovate-config-lddubeau",
+  "version": "1.0.0",
+  "description": "A renovate configuration for my projects.",
+  "scripts": {
+    "postversion": "npm publish",
+    "postpublish": "git push origin --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lddubeau/renovate-config-lddubeau.git"
+  },
+  "keywords": [
+    "renovate"
+  ],
+  "author": "Louis-Dominique <ldd@lddubeau.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lddubeau/renovate-config-lddubeau/issues"
+  },
+  "homepage": "https://github.com/lddubeau/renovate-config-lddubeau#readme",
+  "renovate-config": {
+    "base": {
+      "extends": [
+        "config:base",
+        ":semanticCommitTypeAll(build)"
+      ],
+      "automerge": true,
+      "automergeType": "branch",
+      "major": {
+        "automerge": false
+      },
+      "rangeStrategy": "bump"
+    }
+  }
+}
